@@ -1,13 +1,13 @@
-import {  useState } from "react";
 import mockData from "../assets/data.json";
-import timestamps from "../assets/timeStamps.json";
+import {  useState } from "react";
 import styles from "./Dashboard.module.css";
+import timestamps from "../assets/timeStamps.json";
 import Card from "../component/card/Card";
 import Dropdown from "../component/dropdown/Dropdown";
-import HeaderTitle from "../component/header-title/HeaderTitle";
-import Search from "../component/search/Search";
-import List from "../component/list/List";
 import { Button } from "../stories/Button";
+import HeaderTitle from "../component/header-title/HeaderTitle";
+import List from "../component/list/List";
+import Search from "../component/search/Search";
 
 const Dashboard = () => {
   const [data,setData]=useState(mockData.results);
