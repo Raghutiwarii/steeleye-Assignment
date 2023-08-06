@@ -34,8 +34,8 @@ const Dashboard = () => {
   {
            const target =e.target.value;
            setSearchText(target);
-           setData(mockData.results.filter(i=>{
-           return i["&id"].toLowerCase().includes(target.toLowerCase());
+           setData( mockData.results.filter( i=> {
+               return i["&id"].toLowerCase().includes(target.toLowerCase());
            }
            )
            )
