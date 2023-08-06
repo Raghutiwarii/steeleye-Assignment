@@ -19,7 +19,7 @@ const Dashboard = () => {
   const combinedData = mockData.results.map((order) => {
       const timestampData = timestamps.results.find((timestamp) => timestamp["&id"] === order["&id"]);
       return {
-        ...order,
+       ...order,
         orderSubmitted: timestampData ? timestampData.timestamps.orderSubmitted : "N/A",
       };
     });
@@ -44,14 +44,10 @@ const Dashboard = () => {
   return (
     <div>
       <div className={styles.header}>
-        <HeaderTitle
-            primaryTitle="Orders" secondaryTitle={`${totalOrders} orders`}
-          />
+        <HeaderTitle primaryTitle="Orders" secondaryTitle={`${totalOrders} orders`} />
         <div className={styles.actionBox}>
           <Search value={searchText} onChange={(ele) => handleSearch(ele)} />
-          <Dropdown options={["GBP", "USD", "JPY", "EUR"]}
-            onChange={(e) => setCurrency(e.target.value)}
-            selectedItem={currency} />
+          <Dropdown options={["GBP", "USD", "JPY", "EUR"]} onChange={(e) => setCurrency(e.target.value)} selectedItem={currency} />
         </div>
       </div>
       <div className={styles.content}>
