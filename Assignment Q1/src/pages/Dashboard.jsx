@@ -47,8 +47,8 @@ const Dashboard = () => {
       <div className = {styles.header} >
         <HeaderTitle primaryTitle="Orders" secondaryTitle={`${totalOrders} orders`} />
         <div className = {styles.actionBox}>
-          <Search value = {searchText} onChange={(ele) => handleSearchBar(ele)} />
-          <Dropdown options={["GBP", "USD", "JPY", "EUR"]} onChange={(e) => setCurrency(e.target.value)} selectedItem={currency} />
+          <Search value = {searchText} onChange={(event) => handleSearchBar(event)} />
+          <Dropdown options={["GBP", "USD", "JPY", "EUR"]} onChange={ ( event ) => setCurrency( event.target.value )} selectedItem = {currency} />
         </div>
       </div>
       <div className={styles.content}>
