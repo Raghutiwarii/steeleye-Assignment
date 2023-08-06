@@ -57,7 +57,6 @@ const Dashboard = () => {
         </div>
         <List rows={data} time={timestamps.results} selectedCurrency={currency} onOrderSelect={setHandleOrderSelection} onOrderSelectTime={setSelectedOrderTimeStamps} />
       </div>
-    <Button />
     </div>
   );
 };
