@@ -10,11 +10,11 @@ import List from "../component/list/List";
 import Search from "../component/search/Search";
 
 const Dashboard = () => {
-  const [data,setData]=useState(mockData.results);
   const [currency, setCurrency] = useState("EUR");
   const [searchText, setSearchText] = useState("");
   const [handleOrderSelection, setHandleOrderSelection] = useState({});
   const [selectedOrderTimeStamps, setSelectedOrderTimeStamps] = useState({});
+  const [data,setData]=useState(mockData.results);
 
   const combinedData = mockData.results.map((order) => {
       const timestampData = timestamps.results.find((timestamp) => timestamp["&id"] === order["&id"]);
