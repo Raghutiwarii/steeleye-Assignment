@@ -30,7 +30,7 @@ const Dashboard = () => {
   
   const totalOrders = filteredData.length;
   
-  const handleSearch=(e)=>
+  const handleSearchBar=(e)=>
   {
            const target =e.target.value;
            setSearchText(target);
@@ -44,17 +44,17 @@ const Dashboard = () => {
   return (
     <>
       <div>
-      <div className={styles.header} >
+      <div className = {styles.header} >
         <HeaderTitle primaryTitle="Orders" secondaryTitle={`${totalOrders} orders`} />
-        <div className={styles.actionBox}>
-          <Search value={searchText} onChange={(ele) => handleSearch(ele)} />
+        <div className = {styles.actionBox}>
+          <Search value = {searchText} onChange={(ele) => handleSearchBar(ele)} />
           <Dropdown options={["GBP", "USD", "JPY", "EUR"]} onChange={(e) => setCurrency(e.target.value)} selectedItem={currency} />
         </div>
       </div>
       <div className={styles.content}>
         <div className={styles.section}>
-          <Card cardData={handleOrderSelection} title="Selected Order Details" />
-          <Card cardData={selectedOrderTimeStamps} title="Selected Order Timestamps" />
+          <Card cardData = {handleOrderSelection} title="Selected Order Details" />
+          <Card cardData = {selectedOrderTimeStamps} title="Selected Order Timestamps" />
         </div>
         <List rows={data} time={timestamps.results} selectedCurrency={currency} onOrderSelect={setHandleOrderSelection} onOrderSelectTime={setSelectedOrderTimeStamps} />
       </div>
