@@ -1,0 +1,32 @@
+.container {
+  background-color: #043463;
+  border-radius: 1em;
+  color: white;
+}
+.container-large{
+  background-color: #043463;
+  border-radius: 1em;
+  color: white;
+  width: 600px;
+}
+.container-small{
+  background-color: #043463;
+  border-radius: 1em;
+  color: white;
+  width:300px;
+}
+.cell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.089);
+}
+.title {
+  padding: 1em;
+  font-size: large;
+  font-weight: bold;
+}
+.value {
+  border-bottom: 1px solid;
+}
