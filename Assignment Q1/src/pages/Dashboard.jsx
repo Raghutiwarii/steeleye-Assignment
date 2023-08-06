@@ -12,8 +12,8 @@ import Search from "../component/search/Search";
 const Dashboard = () => {
   const [currency, setCurrency] = useState("EUR");
   const [searchText, setSearchText] = useState("");
-  const [handleOrderSelection, setHandleOrderSelection] = useState({});
   const [selectedOrderTimeStamps, setSelectedOrderTimeStamps] = useState({});
+  const [handleOrderSelection, setHandleOrderSelection] = useState({});
   const [data,setData]=useState(mockData.results);
 
   const combinedData = mockData.results.map((order) => {
@@ -42,8 +42,9 @@ const Dashboard = () => {
   }
   
   return (
-    <div>
-      <div className={styles.header}>
+    <>
+      <div>
+      <div className={styles.header} >
         <HeaderTitle primaryTitle="Orders" secondaryTitle={`${totalOrders} orders`} />
         <div className={styles.actionBox}>
           <Search value={searchText} onChange={(ele) => handleSearch(ele)} />
@@ -58,6 +59,7 @@ const Dashboard = () => {
         <List rows={data} time={timestamps.results} selectedCurrency={currency} onOrderSelect={setHandleOrderSelection} onOrderSelectTime={setSelectedOrderTimeStamps} />
       </div>
     </div>
+    </>
   );
 };
 export default Dashboard;
